@@ -1,0 +1,21 @@
+use Fukushima dose rate data to map out the dose in the area around fukushima in the time after the fukushima accident
+
+Safecast is a project that has already done this with independent measurements, has API and data for download
+
+Ideas:
+Develop an interface to plot on a map
+There have been conspiracy theories/allegations that the Japanese govt was not being truthful in reporting their radiation readings. We can compare the difference between government data and safecast data to see if these have any merit
+- find pairs of points that are within some specified distance to count as 'the same point'
+- some statistical analysis for difference over time?
+- need to look out for
+    - units
+    - how high above ground were the measurements taken
+
+- could also look at other sources such as NNSA
+- 
+
+Resources:
+http://safecast.org/tilemap/methodology.html
+http://nnsa.energy.gov/mediaroom/pressreleases/japandata
+https://iec.iaea.org/fmd/statistics.aspx
+https://www.quora.com/How-do-I-plot-GPS-points-on-a-map-using-Python
