@@ -11,12 +11,12 @@ Measurements from independent "pro-data" project Safecast. Full data set downloa
 
 #Tasks
 1. Collect and clean data (by Oct 12)
-* removing faulty measurements
-* converting measurement values to standardized units
-* converting measurement times to standardized datetimes
-* upload data into a mongodb database for easier analysis and querying
+  * removing faulty measurements
+  * converting measurement values to standardized units
+  * converting measurement times to standardized datetimes
+  * upload data into a mongodb database for easier analysis and querying
 2. Compare data from two sources
-* identify and compare measured dose rates "similar measurements" that are close to each other in time and space
+  * identify and compare measured dose rates "similar measurements" that are close to each other in time and space
 3. Visualize each dataset
 4. Visualize differences in datasets
 
