@@ -1,0 +1,17 @@
+Information on background radiation
+
+Values often given in mSv/yr. Our measurements are in uSv/hr. The conversion is 0.1141(uSv/hr) = mSv/year if that hourly dose rate is consistent the entire year. Or, 8.766(mSv/year) = uSv/hr
+
+ranges widely based on where you live
+average = 2.4 mSv/year, ~3mSv/year in North America
+Can range from 1 mSv/year to 10 mSv/year, but places where people live have recorded up to 50 mSv/year.
+There is a beach in Brazil (uninhabited) with yearly natural background of 800 msV/year (mostly from radon)
+Americans also receive a yearly dose from medical procedures and living near nuclear power plants
+
+Public dose limits
+1 mSv/yr above backround is limit for nuclear power plants exposure to population in the US
+100 mSv/yr (11.41 uSv/h average)= lowest annual dose at which an increase in the chance of cancer has been observed
+1000 mSv/yr (114.1 uSv/h average) = universally accepted annual dose that increases chance of cancer by 5% in lifetime
+
+Sources:
+http://www.world-nuclear.org/info/Safety-and-Security/Radiation-and-Health/Nuclear-Radiation-and-Health-Effects/

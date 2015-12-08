@@ -1,0 +1,80 @@
+import de.fhpotsdam.unfolding.mapdisplay.*;
+import de.fhpotsdam.unfolding.utils.*;
+import de.fhpotsdam.unfolding.marker.*;
+import de.fhpotsdam.unfolding.tiles.*;
+import de.fhpotsdam.unfolding.interactions.*;
+import de.fhpotsdam.unfolding.ui.*;
+import de.fhpotsdam.unfolding.*;
+import de.fhpotsdam.unfolding.core.*;
+import de.fhpotsdam.unfolding.mapdisplay.shaders.*;
+import de.fhpotsdam.unfolding.data.*;
+import de.fhpotsdam.unfolding.geo.*;
+import de.fhpotsdam.unfolding.texture.*;
+import de.fhpotsdam.unfolding.events.*;
+import de.fhpotsdam.utils.*;
+import de.fhpotsdam.unfolding.providers.*;
+
+
+String title;
+Table table;
+PImage bg;
+UnfoldingMap map;
+
+void setup()
+{
+  map = new UnfoldingMap(this, new Microsoft.AerialProvider());
+  map.zoomAndPanTo(6, new Location(39.67f, 135.9f));
+  table = loadTable("combined_500m_1hr.csv", "header");
+
+  println(table.getRowCount() + " total rows in table"); 
+  float minlat = 1000;
+  float maxlat = 0;
+  float minlon = 1000;
+  float maxlon = 0;
+  
+  for (TableRow row : table.rows()) {
+   if (row.getInt("mloc_id")==23) {
+    int id = row.getInt("User ID");
+    float lat = row.getFloat("lat");
+    if (lat < minlat) {
+      minlat = lat;
+    } else if (lat > maxlat) {
+      maxlat = lat;
+    }
+    float lon = row.getFloat("long");
+    if (lon < minlon) {
+      minlon = lon;
+    } else if (lon > maxlon) {
+      maxlon = lon;
+    }
+    float dr = row.getFloat("doserate");
+    Location pt = new Location(lat, lon);
+    SimplePointMarker mrk = new SimplePointMarker(pt);
+    if (dr < row.getFloat("mdoserate")) {
+      mrk.setColor(color(255,80,0,100));
+    } else if (dr > row.getFloat("mdoserate")) {
+      mrk.setColor(color(0,255,0,100));
+    } else mrk.setColor(color(100,100,100,100));
+    mrk.setStrokeWeight(int(dr*20));
+    map.addMarkers(mrk);
+    
+    lat = row.getFloat("mlat");
+    lon = row.getFloat("mlong");
+    dr  = row.getFloat("mdoserate");
+    pt = new Location(lat, lon);
+    mrk = new SimplePointMarker(pt);
+    mrk.setColor(color(0,0,255,100));
+    mrk.setStrokeWeight(int(dr*20));
+    map.addMarkers(mrk);
+    println(id + " " + lon + " " + lat + " " + dr);
+   }
+  }
+  println(minlat + " " + maxlat + " " + minlon + " " + maxlon + " ");
+  size(int((maxlon-minlon)*50000), int((maxlat-minlat)*50000));
+  map.zoomAndPanTo(15, new Location(maxlat+((maxlat-minlat)/3.5), minlon-(maxlon-minlon)/3 ));
+  
+}
+
+void draw() {
+  map.draw();
+}
