@@ -1,6 +1,6 @@
 Information on background radiation
 
-Values often given in mSv/yr. Our measurements are in uSv/hr. The conversion is 0.1141(uSv/hr) = mSv/year if that hourly dose rate is consistent the entire year
+Values often given in mSv/yr. Our measurements are in uSv/hr. The conversion is 0.1141(uSv/hr) = mSv/year if that hourly dose rate is consistent the entire year. Or, 8.766(mSv/year) = uSv/hr
 
 ranges widely based on where you live
 average = 2.4 mSv/year, ~3mSv/year in North America
