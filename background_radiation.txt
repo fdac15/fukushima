@@ -10,7 +10,7 @@ Americans also receive a yearly dose from medical procedures and living near nuc
 
 Public dose limits
 1 mSv/yr above backround is limit for nuclear power plants exposure to population in the US
-100 mSv/yr (876.6 uSv/h average)= lowest annual dose at which an increase in the chance of cancer has been observed
+100 mSv/yr (11.41 uSv/h average)= lowest annual dose at which an increase in the chance of cancer has been observed
 
 Sources:
 http://www.world-nuclear.org/info/Safety-and-Security/Radiation-and-Health/Nuclear-Radiation-and-Health-Effects/
